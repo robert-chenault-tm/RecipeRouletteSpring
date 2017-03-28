@@ -1,0 +1,9 @@
+<div>
+	<h1 ng-show="noRecipes">No recipes to display</h1>
+	<ul>
+		<li ng-repeat="recipe in recipes">
+			<a ng-href="/edit/{{recipe.id}}" >{{recipe.name}}</a>
+		</li>
+	</ul>
+	<button class="btn btn-default" ng-click="launchAddRecipe()">Add a recipe</button>
+</div>

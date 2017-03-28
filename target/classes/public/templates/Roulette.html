@@ -1,0 +1,13 @@
+<div>
+	<h1>{{recipe.name}}</h1>
+	<br />
+	<p>Preparation Time: {{recipe.prepTime.hours}} hours {{recipe.prepTime.minutes}} minutes</p>
+	<p>Cook Time: {{recipe.cookTime.hours}} hours {{recipe.cookTime.minutes}} minutes</p>
+	<br />
+	<p>Ingredients:</p>
+	<p ng-repeat="ingredient in recipe.ingredients">{{ingredient.amount}} {{ingredient.measurement}} {{ingredient.ingredient}}<br /></p>
+	<br />
+	<p>Steps:</p>
+	<p ng-repeat="step in recipe.steps">{{step.stepNumber}}. {{step.step}}<br /></p>
+	<button class="btn btn-default" ng-click="reRoulette()">Re-Roulette</button>
+</div>
